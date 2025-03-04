@@ -10,7 +10,7 @@ os.makedirs(BASE_DIR, exist_ok=True)  # Ensure the base directory exists
 app = FastAPI()
 
 @app.get("/")
-async def test(repo_name: str):
+async def test():
     return {"status": "success", "message": f"API Is Working"}
 
 @app.post("/repository/create")
